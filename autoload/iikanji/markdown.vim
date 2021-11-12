@@ -70,10 +70,10 @@ function! iikanji#markdown#indent_with_tab(arrow) abort
     let c = col('.')
     if a:arrow > 0
       let c += shiftwidth()
-      execute 'normal ' count . '>>'
+      execute 'normal ' v:count . '>>'
     else
       let c -= shiftwidth()
-      execute 'normal ' count . '<<'
+      execute 'normal ' v:count . '<<'
     endif
     if strwidth(getline('.')) == c
       let c += 1
